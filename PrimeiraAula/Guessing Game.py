@@ -4,11 +4,14 @@ print('*********************************************************')
 print('    Seja Bem Vindo ao Jogo De Adivinhacao de numero')
 print('*********************************************************')
 
-numero_aleatorio = random.randint(0, 100)
+numero_aleatorio = random.randint(1, 2)
+acertou = False
 
-numeroEscolhidoUsuario = int(input("Digite Seu numero: "))
+while not acertou:
+    numeroEscolhidoUsuario = int(input("Digite Seu numero: "))
 
-if numero_aleatorio == numeroEscolhidoUsuario:
-    print('Voce acertou')
-else:
-    print('Voce Errou. O número correto era:', numero_aleatorio)
+    if numero_aleatorio == numeroEscolhidoUsuario:
+        print('Voce acertou')
+        acertou = True
+    else:
+        print('Voce Errou, Tente denovo:')
